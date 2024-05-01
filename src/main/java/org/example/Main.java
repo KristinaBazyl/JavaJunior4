@@ -60,9 +60,9 @@ public class Main {
         try (Statement st = connection.createStatement()){
             st.execute("""
                     INSERT INTO `students2`(`id`,`first_name`, `second_name`,`group_id`) VALUES
-                    (1, 'Ivan', 'Ivanov',22),
-                    (2, 'Petr', 'Petrov',33),
-                    (3, 'Fedor', 'Fedorov',44);
+                    (1, 'Ivan', 'Ivanov',1),
+                    (2, 'Petr', 'Petrov',2),
+                    (3, 'Fedor', 'Fedorov',3);
                     """);
         }
 
@@ -78,10 +78,10 @@ public class Main {
             }
 
             Students2 newStudent = new Students2();
-            newStudent.setId(4L);
+            newStudent.setId(5L);
             newStudent.setFirst_name("Kolya");
             newStudent.setSecond_name("Frolov");
-            newStudent.setGroup_id(45L);
+            newStudent.setGroup_id(1L);
             System.out.println(newStudent);
             try(Session session = sessionFactory.openSession()){
                 Transaction tx = session.beginTransaction();

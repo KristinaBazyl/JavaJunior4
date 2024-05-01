@@ -21,6 +21,8 @@ public class Students2 {
     @Column(name = "group_id")
     private Long group_id;
 
+
+
     public Long getId() {
         return id;
     }
